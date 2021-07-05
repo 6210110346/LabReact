@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 export default function CharacterCard(props) {
- return (
- <div>{props.value}</div>
- )
+    const bool = false
+    const [active, setActive] = useState(bool);
+    const activate = () =>{setActive(!bool)}
+
+    const className = `card ${active ? 'activeCard': ''}`
+    return (
+        <div className={className} onClick={activate}>{props.value}</div>
+    )
 }
