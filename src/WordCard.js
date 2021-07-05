@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CharacterCard from './CharacterCard';
+import Timer from './Timer';
 import _ from 'lodash';
 
 const prepareStateFromWord = (given_word) => {
@@ -39,6 +40,9 @@ export default function WordCard(props) {
     return (
         <div>
             {state.chars.map((c, i) => <CharacterCard value={c} key={i} activationHandler={activationHandler} attempt={state.attempt}/>)}
+            <div>
+                <Timer/>
+            </div>
         </div>
     );
 }
