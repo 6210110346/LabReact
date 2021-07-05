@@ -8,7 +8,7 @@ export default function Timer(){
     
     return(
         <div>
-            Seconds: 
+            Seconds: 0
         </div>
     )
 }
