@@ -1,10 +1,14 @@
-import React from 'react';
+import React,{useState} from 'react';
 export default function Timer(){
-    let seconds = 0;
-    setInterval(()=> seconds = seconds + 1,1000)
+    const [seconds, setTime] = useState(0);
+    setInterval(()=> {
+        // setTime(seconds + 1)
+        // console.log(seconds)
+    },1000)
+    
     return(
         <div>
-            Seconds: {seconds}
+            Seconds: 
         </div>
     )
 }
